@@ -93,10 +93,6 @@ Default value is "White"
 > `gdt-frames` and `gdt-start-color` are watched by variable watcher which
 > clears gradient pattern cache and terminates all gradients when these variables are set.
 
-## :new_moon: Known limitation
-
-jit-lock
-
 :memo: File a bug report in [Issues](https://github.com/arch320/gradient-typing/issues).
 
 # :wrestling: Acknowledgment
