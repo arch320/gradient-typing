@@ -86,11 +86,11 @@
 
 ;;; SCM Log
 ;;
-;;   $Revision: 44:d790adf50849 tip $
+;;   $Revision: 46:e8d3bb0dc017 tip $
 ;;   $Committer: arch320 $
-;;   $LastModified: Thu, 24 Sep 2026 01:35:58 +0900 $
+;;   $LastModified: Thu, 24 Sep 2026 02:22:00 +0900 $
 ;;
-;;   $Lastlog: release $
+;;   $Lastlog: some tweak $
 ;;
 
 ;;; ChangeLog
@@ -100,7 +100,7 @@
 
 ;;; Code:
 
-(defconst gradient-typing-vers "$Id: gradient-typing.el,v 44:d790adf50849 2026-09-24 01:35 +0900 arch320 $"
+(defconst gradient-typing-vers "$Id: gradient-typing.el,v 46:e8d3bb0dc017 2026-09-24 02:22 +0900 arch320 $"
   "Gradient Typing Effect version.")
 
 ;;
@@ -148,9 +148,7 @@ Lower values may significantly affect performance."
   :type '(choice (const :tag "Default (16fps)" 0.0625)
                  (float :tag "Custom"))
   :set #'(lambda (sym v)
-           (if (> v 0)
-               (set-default sym v)
-             (set-default sym (eval (car (get sym 'standard-value)))))))
+           (set-default sym (if (> v 0) v (eval (car (get sym 'standard-value)))))))
 
 (defcustom gdt-pattern 8
   "Number of gradient patterns to be generated.
@@ -378,6 +376,6 @@ correctly."
 ;;; End:
 
 ;;
-;; $Id: gradient-typing.el,v 44:d790adf50849 2026-09-24 01:35 +0900 arch320 $
+;; $Id: gradient-typing.el,v 46:e8d3bb0dc017 2026-09-24 02:22 +0900 arch320 $
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; gradient-typing.el ends here
