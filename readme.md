@@ -4,9 +4,9 @@
    Created date 2026-09-22 19:52 +0900
    Author: Mitsuo Saito <arch320(AT)gmail(DOT)com>
 
-   $Revision: 48:1fa79b023ce5 tip $
+   $Revision: 49:9898bb2c5753 tip $
    $Committer: arch320 $
-   $LastModified: Thu, 24 Sep 2026 17:42:15 +0900 $
+   $LastModified: Thu, 24 Sep 2026 18:04:42 +0900 $
 
    $Lastlog: readme.md $
 -->
@@ -96,7 +96,7 @@ Default value is "White"
 ## :new_moon: Known limitation
 
 The foreground color(gradient end-color) is determined immediately after typing.
-If the text has not been font-locked at that point (maybe due to the jit-lock settings),
+If the text has not been fontified at that point (maybe due to the jit-lock settings),
 the gradient end-color may differ from the color actually displayed.
 
 :memo: File a bug report in [Issues](https://github.com/arch320/gradient-typing/issues).
@@ -107,5 +107,5 @@ Special thanks to [Barrulus](https://github.com/barrulus) for the original idea 
 This project was heavily inspired by :octocat: [welding-cursor.el](https://github.com/barrulus/forge-cursor/blob/main/welding-cursor.el)
 
 <br/><br/>
-`$Id: readme.md,v 48:1fa79b023ce5 2026-09-24 17:42 +0900 arch320 $`<br/>
+`$Id: readme.md,v 49:9898bb2c5753 2026-09-24 18:04 +0900 arch320 $`<br/>
 `readme.md ends here`
