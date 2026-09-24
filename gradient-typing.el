@@ -86,21 +86,23 @@
 
 ;;; SCM Log
 ;;
-;;   $Revision: 51:00d4adcceffa  $
+;;   $Revision: 55:3066869d89cf tip $
 ;;   $Committer: arch320 $
-;;   $LastModified: Thu, 24 Sep 2026 19:18:20 +0900 $
+;;   $LastModified: Thu, 24 Sep 2026 20:40:30 +0900 $
 ;;
 ;;   $Lastlog: tweak $
 ;;
 
 ;;; ChangeLog
 ;;
+;;   2026/09/24 Ver 0.2 some tweak
+;;
 ;;   2026/09/24 Ver 0.1 Initial release
 ;;
 
 ;;; Code:
 
-(defconst gradient-typing-vers "$Id: gradient-typing.el,v 51:00d4adcceffa 2026-09-24 19:18 +0900 arch320 $"
+(defconst gradient-typing-vers "$Id: gradient-typing.el,v 55:3066869d89cf 2026-09-24 20:40 +0900 arch320 $"
   "Gradient Typing Effect version.")
 
 ;;
@@ -288,9 +290,10 @@ Modified from `welding-cursor.el' by Mitsuo Saito on 2026."
                      (cancel-timer timer)))
 
                   ((= i 0)
-                   (setq fc (save-excursion
-                              (goto-char pos)
-                              (gdt-foreground-color-at-point)))
+                   (setq fc (with-current-buffer (overlay-buffer overlay)
+                              (save-excursion
+                                (goto-char pos)
+                                (gdt-foreground-color-at-point))))
                    (setq gr (or (gethash fc gdt--cache)
                                 (puthash fc (gdt-generate-gradient
                                              gdt-start-color fc step)
@@ -380,6 +383,6 @@ correctly."
 ;;; End:
 
 ;;
-;; $Id: gradient-typing.el,v 51:00d4adcceffa 2026-09-24 19:18 +0900 arch320 $
+;; $Id: gradient-typing.el,v 55:3066869d89cf 2026-09-24 20:40 +0900 arch320 $
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; gradient-typing.el ends here
