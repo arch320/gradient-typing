@@ -4,11 +4,11 @@
    Created date 2026-09-22 19:52 +0900
    Author: Mitsuo Saito <arch320(AT)gmail(DOT)com>
 
-   $Revision: 42:4fe23da377cd tip $
+   $Revision: 48:1fa79b023ce5 tip $
    $Committer: arch320 $
-   $LastModified: Thu, 24 Sep 2026 00:56:29 +0900 $
+   $LastModified: Thu, 24 Sep 2026 17:42:15 +0900 $
 
-   $Lastlog: complete $
+   $Lastlog: readme.md $
 -->
 
 # Gradient Typing Effect
@@ -71,7 +71,7 @@ Default value is 8
 ### :small_blue_diamond: gdt-start-color - `Start color of the gradient`
 
 This color transitions into the current context color as a gradient.
-
+a
 <table>
   <tr align="center">
     <td><img src="img/white.gif"></td>
@@ -93,6 +93,12 @@ Default value is "White"
 > `gdt-frames` and `gdt-start-color` are watched by variable watcher which
 > clears gradient pattern cache and terminates all gradients when these variables are set.
 
+## :new_moon: Known limitation
+
+The foreground color(gradient end-color) is determined immediately after typing.
+If the text has not been font-locked at that point (maybe due to the jit-lock settings),
+the gradient end-color may differ from the color actually displayed.
+
 :memo: File a bug report in [Issues](https://github.com/arch320/gradient-typing/issues).
 
 # :wrestling: Acknowledgment
@@ -101,5 +107,5 @@ Special thanks to [Barrulus](https://github.com/barrulus) for the original idea 
 This project was heavily inspired by :octocat: [welding-cursor.el](https://github.com/barrulus/forge-cursor/blob/main/welding-cursor.el)
 
 <br/><br/>
-`$Id: readme.md,v 42:4fe23da377cd 2026-09-24 00:56 +0900 arch320 $`<br/>
+`$Id: readme.md,v 48:1fa79b023ce5 2026-09-24 17:42 +0900 arch320 $`<br/>
 `readme.md ends here`
