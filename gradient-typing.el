@@ -86,9 +86,9 @@
 
 ;;; SCM Log
 ;;
-;;   $Revision: 50:eef521424bd2 tip $
+;;   $Revision: 51:00d4adcceffa  $
 ;;   $Committer: arch320 $
-;;   $LastModified: Thu, 24 Sep 2026 19:04:14 +0900 $
+;;   $LastModified: Thu, 24 Sep 2026 19:18:20 +0900 $
 ;;
 ;;   $Lastlog: tweak $
 ;;
@@ -100,7 +100,7 @@
 
 ;;; Code:
 
-(defconst gradient-typing-vers "$Id: gradient-typing.el,v 50:eef521424bd2 2026-09-24 19:04 +0900 arch320 $"
+(defconst gradient-typing-vers "$Id: gradient-typing.el,v 51:00d4adcceffa 2026-09-24 19:18 +0900 arch320 $"
   "Gradient Typing Effect version.")
 
 ;;
@@ -321,9 +321,22 @@ correctly."
   (dolist (buf (buffer-list))
     (with-current-buffer buf
       (when gradient-typing-mode
-        (save-restriction
-          (widen)
-          (remove-overlays (point-min) (point-max) 'gdt-overlay t))))))
+        (gdt-remove-overlay)))))
+
+(defun gdt-remove-overlay ()
+  "Remove all gradients."
+  (save-restriction
+    (widen)
+    (remove-overlays (point-min) (point-max) 'gdt-overlay t)))
+
+(defun gdt-init ()
+  "Initialize."
+  (add-hook 'post-self-insert-hook #'gdt-insert-handler nil t))
+
+(defun gdt-exit ()
+  "Cleanup."
+  (gdt-remove-overlay)
+  (remove-hook 'post-self-insert-hook #'gdt-insert-handler t))
 
 (defun gdt-mode-trigger ()
   "Enable `gradient-typing-mode' if conditions are met."
@@ -349,8 +362,8 @@ correctly."
   :group 'gradient-typing
   :lighter "GT"
   (if gradient-typing-mode
-      (add-hook 'post-self-insert-hook #'gdt-insert-handler nil t)
-    (remove-hook 'post-self-insert-hook #'gdt-insert-handler t)))
+      (gdt-init)
+    (gdt-exit)))
 
 ;;;###autoload
 (define-globalized-minor-mode global-gradient-typing-mode
@@ -367,6 +380,6 @@ correctly."
 ;;; End:
 
 ;;
-;; $Id: gradient-typing.el,v 50:eef521424bd2 2026-09-24 19:04 +0900 arch320 $
+;; $Id: gradient-typing.el,v 51:00d4adcceffa 2026-09-24 19:18 +0900 arch320 $
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; gradient-typing.el ends here
