@@ -6,7 +6,7 @@
 ;; Created date 2026-09-20 02:48 +0900
 
 ;; Author: Mitsuo Saito <arch320(AT)gmail(DOT)com>
-;; Version: 0.1
+;; Version: 0.2
 ;; Keywords: convenience, faces
 ;; URL: http://github.com/arch320/gradient-typing/
 ;; Compatibility: GNU Emacs 31.1 later
@@ -86,11 +86,11 @@
 
 ;;; SCM Log
 ;;
-;;   $Revision: 55:3066869d89cf tip $
+;;   $Revision: 57:c5da635b203f tip $
 ;;   $Committer: arch320 $
-;;   $LastModified: Thu, 24 Sep 2026 20:40:30 +0900 $
+;;   $LastModified: Thu, 24 Sep 2026 20:52:52 +0900 $
 ;;
-;;   $Lastlog: tweak $
+;;   $Lastlog: bump version $
 ;;
 
 ;;; ChangeLog
@@ -102,7 +102,7 @@
 
 ;;; Code:
 
-(defconst gradient-typing-vers "$Id: gradient-typing.el,v 55:3066869d89cf 2026-09-24 20:40 +0900 arch320 $"
+(defconst gradient-typing-vers "$Id: gradient-typing.el,v 57:c5da635b203f 2026-09-24 20:52 +0900 arch320 $"
   "Gradient Typing Effect version.")
 
 ;;
@@ -383,6 +383,6 @@ correctly."
 ;;; End:
 
 ;;
-;; $Id: gradient-typing.el,v 55:3066869d89cf 2026-09-24 20:40 +0900 arch320 $
+;; $Id: gradient-typing.el,v 57:c5da635b203f 2026-09-24 20:52 +0900 arch320 $
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; gradient-typing.el ends here
