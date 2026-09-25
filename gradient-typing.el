@@ -86,11 +86,11 @@
 
 ;;; SCM Log
 ;;
-;;   $Revision: 57:c5da635b203f tip $
+;;   $Revision: 58:300c7d46bfc1 tip $
 ;;   $Committer: arch320 $
-;;   $LastModified: Thu, 24 Sep 2026 20:52:52 +0900 $
+;;   $LastModified: Fri, 25 Sep 2026 11:01:22 +0900 $
 ;;
-;;   $Lastlog: bump version $
+;;   $Lastlog: add evaporate property $
 ;;
 
 ;;; ChangeLog
@@ -102,7 +102,7 @@
 
 ;;; Code:
 
-(defconst gradient-typing-vers "$Id: gradient-typing.el,v 57:c5da635b203f 2026-09-24 20:52 +0900 arch320 $"
+(defconst gradient-typing-vers "$Id: gradient-typing.el,v 58:300c7d46bfc1 2026-09-25 11:01 +0900 arch320 $"
   "Gradient Typing Effect version.")
 
 ;;
@@ -275,6 +275,7 @@ Modified from `welding-cursor.el' by Mitsuo Saito on 2026."
            (step gdt-pattern)
            fc gr timer)
       (overlay-put overlay 'gdt-overlay 'identify)
+      (overlay-put overlay 'evaporate t)
       (overlay-put overlay 'priority gdt-overlay-priority)
       (setq timer
             (run-at-time
@@ -383,6 +384,6 @@ correctly."
 ;;; End:
 
 ;;
-;; $Id: gradient-typing.el,v 57:c5da635b203f 2026-09-24 20:52 +0900 arch320 $
+;; $Id: gradient-typing.el,v 58:300c7d46bfc1 2026-09-25 11:01 +0900 arch320 $
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; gradient-typing.el ends here
