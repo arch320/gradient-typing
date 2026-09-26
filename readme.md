@@ -59,6 +59,8 @@ Default value is 0.0625 (16fps)
 > [!WARNING]
 > Lower values may significantly affect performance.
 
+<br />
+
 ### :small_blue_diamond: gdt-pattern - `Number of gradient patterns to be generated`
 
 The larger the pattern, the longer the gradient lasts.
@@ -67,6 +69,8 @@ Default value is 8
 
 > [!TIP]
 > gradient duration = gdt-frames * gdt-pattern
+
+<br/>
 
 ### :small_blue_diamond: gdt-start-color - `Start color of the gradient`
 
