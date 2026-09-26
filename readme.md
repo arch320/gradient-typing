@@ -4,9 +4,9 @@
    Created date 2026-09-22 19:52 +0900
    Author: Mitsuo Saito <arch320(AT)gmail(DOT)com>
 
-   $Revision: 49:9898bb2c5753 tip $
+   $Revision: 59:e1e3a1f097f2 tip $
    $Committer: arch320 $
-   $LastModified: Thu, 24 Sep 2026 18:04:42 +0900 $
+   $LastModified: Sat, 26 Sep 2026 21:26:18 +0900 $
 
    $Lastlog: readme.md $
 -->
@@ -75,7 +75,7 @@ Default value is 8
 ### :small_blue_diamond: gdt-start-color - `Start color of the gradient`
 
 This color transitions into the current context color as a gradient.
-a
+
 <table>
   <tr align="center">
     <td><img src="img/white.gif"></td>
@@ -111,5 +111,5 @@ Special thanks to [Barrulus](https://github.com/barrulus) for the original idea 
 This project was heavily inspired by :octocat: [welding-cursor.el](https://github.com/barrulus/forge-cursor/blob/main/welding-cursor.el)
 
 <br/><br/>
-`$Id: readme.md,v 49:9898bb2c5753 2026-09-24 18:04 +0900 arch320 $`<br/>
+`$Id: readme.md,v 59:e1e3a1f097f2 2026-09-26 21:26 +0900 arch320 $`<br/>
 `readme.md ends here`
