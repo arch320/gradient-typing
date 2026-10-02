@@ -4,14 +4,14 @@
    Created date 2026-09-22 19:52 +0900
    Author: Mitsuo Saito <arch320(AT)gmail(DOT)com>
 
-   $Revision: 59:e1e3a1f097f2 tip $
+   $Revision: 61:8162f1590414 tip $
    $Committer: arch320 $
-   $LastModified: Sat, 26 Sep 2026 21:26:18 +0900 $
+   $LastModified: Fri, 02 Oct 2026 21:43:18 +0900 $
 
-   $Lastlog: readme.md $
+   $Lastlog: add badge $
 -->
 
-# Gradient Typing Effect
+# Gradient Typing Effect [![License GPL 3][gpl3-badge]][gpl3]
 
 ![img](img/gdt.gif)<br />
 
@@ -111,5 +111,5 @@ Special thanks to [Barrulus](https://github.com/barrulus) for the original idea 
 This project was heavily inspired by :octocat: [welding-cursor.el](https://github.com/barrulus/forge-cursor/blob/main/welding-cursor.el)
 
 <br/><br/>
-`$Id: readme.md,v 59:e1e3a1f097f2 2026-09-26 21:26 +0900 arch320 $`<br/>
+`$Id: readme.md,v 61:8162f1590414 2026-10-02 21:43 +0900 arch320 $`<br/>
 `readme.md ends here`
